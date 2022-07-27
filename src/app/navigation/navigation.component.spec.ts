@@ -24,7 +24,7 @@ describe('NavigationComponent', () => {
         MatListModule,
         MatSidenavModule,
         MatToolbarModule,
-      ]
+      ],
     }).compileComponents();
   }));
 
@@ -36,5 +36,14 @@ describe('NavigationComponent', () => {
 
   it('should compile', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render menu', () => {
+    const fixture = TestBed.createComponent(NavigationComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('mat-toolbar')?.textContent).toContain(
+      'Menu'
+    );
   });
 });
