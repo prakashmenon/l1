@@ -33,3 +33,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Add angular material
 `ng add @angular/material`
+
+## Shift to jest
+thymikee.github.io/jest-preset-angular
+https://timdeschryver.dev/blog/integrate-jest-into-an-angular-application-and-library
+npm install -D jest jest-preset-angular @types/jest
+npm uninstall karma-coverage @types/jasmine jasmine-core
+rm karma.conf.js
+rm src/test.ts
