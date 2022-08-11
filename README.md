@@ -28,16 +28,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Create workspace and then push to Github.
+## Create workspace and then push to Github
+
 `ng new l1`
 
 ## Add angular material
+
 `ng add @angular/material`
 
 ## Shift to jest
-thymikee.github.io/jest-preset-angular
-https://timdeschryver.dev/blog/integrate-jest-into-an-angular-application-and-library
-npm install -D jest jest-preset-angular @types/jest
-npm uninstall karma-coverage @types/jasmine jasmine-core
-rm karma.conf.js
-rm src/test.ts
+
+`https://thymikee.github.io/jest-preset-angular`
+`https://timdeschryver.dev/blog/integrate-jest-into-an-angular-application-and-library`
+`npm install -D jest jest-preset-angular @types/jest`
+`npm uninstall karma-coverage @types/jasmine jasmine-core`
+`rm karma.conf.js`
+`rm src/test.ts`

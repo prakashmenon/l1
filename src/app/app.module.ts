@@ -11,9 +11,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { AuthModule } from '@auth0/auth0-angular';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent],
+  declarations: [AppComponent, NavigationComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,6 +26,10 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    AuthModule.forRoot({
+      domain: 'dev-5x20s3l7.us.auth0.com',
+      clientId: 'd3VbILlzEkmwoRVjtYkBQp5Cd90Ag7aQ',
+    }),
   ],
   exports: [MatIconModule],
   providers: [],
