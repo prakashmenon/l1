@@ -44,3 +44,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `npm uninstall karma-coverage @types/jasmine jasmine-core`
 `rm karma.conf.js`
 `rm src/test.ts`
+
+`https://stackoverflow.com/questions/43046063/angular2-testing-change-the-injected-value-of-a-service`
+`https://stackoverflow.com/questions/60296340/cannot-assign-to-var-because-it-is-a-read-only-property-in-angular-test-using`
