@@ -1,3 +1,8 @@
+// Copyright (c) 2022 Prakash Menon
+//
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
 import { TestBed } from '@angular/core/testing';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterTestingModule } from '@angular/router/testing';
