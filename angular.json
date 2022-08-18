@@ -81,9 +81,43 @@
         },
         "test": {
           "builder": "@angular-builders/jest:run"
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "l1:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "l1:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "l1:serve:production"
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "l1:serve:production"
+            }
           }
         }
       }
     }
   }
-
+}

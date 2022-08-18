@@ -54,3 +54,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 `https://stackoverflow.com/questions/43046063/angular2-testing-change-the-injected-value-of-a-service`
 `https://stackoverflow.com/questions/60296340/cannot-assign-to-var-because-it-is-a-read-only-property-in-angular-test-using`
+
+Customize login dialog
+`https://www.youtube.com/watch?v=CEOzi0c-BWc`
+
+e2e testing
+`npm install cypress`
+`./node_modules/.bin/cypress install`
+`ng add @cypress/schematic`
+Additional references
+`https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/logging-in__single-sign-on`
+`https://testing-angular.com/end-to-end-testing/`
