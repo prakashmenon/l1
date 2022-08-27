@@ -13,8 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
-
-import { Injectable } from '@angular/core';
+import { expect } from '@jest/globals';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
