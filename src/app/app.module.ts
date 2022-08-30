@@ -19,9 +19,15 @@ import { MatListModule } from '@angular/material/list';
 import { AuthModule } from '@auth0/auth0-angular';
 import { HomeComponent } from './home/home.component';
 import { environment } from 'src/environments/environment';
+import { AuthButtonComponent } from './auth-button/auth-button.component';
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    HomeComponent,
+    AuthButtonComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

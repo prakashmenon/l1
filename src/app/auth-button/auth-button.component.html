@@ -1,0 +1,23 @@
+<!--
+ Copyright (c) 2022 Prakash Menon
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+<ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+  <button id="logout" data-test="Logout" mat-raised-button (click)="logout()">
+    Log out
+  </button>
+</ng-container>
+
+<ng-template #loggedOut>
+  <button
+    id="login"
+    data-test="Login"
+    mat-raised-button
+    (click)="loginWithRedirect()"
+  >
+    Login
+  </button>
+</ng-template>

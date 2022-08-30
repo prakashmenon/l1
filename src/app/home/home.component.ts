@@ -4,7 +4,6 @@
 // https://opensource.org/licenses/MIT
 
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-home',
@@ -14,11 +13,7 @@ import { AuthService } from '@auth0/auth0-angular';
 export class HomeComponent implements OnInit {
   title = 'The Kitchen Sink Application';
 
-  constructor(public auth: AuthService) {}
-
-  loginWithRedirect(): void {
-    this.auth.loginWithRedirect();
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }

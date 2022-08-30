@@ -10,15 +10,7 @@
     <div class="docs-header-section">
       <h1 class="docs-header-headline">{{ title }}</h1>
       <h2 class="docs-header-subhead">Developing Enterprise Applications</h2>
-      <button
-        id="login"
-        data-test="Login"
-        *ngIf="(auth.isAuthenticated$ | async) === false"
-        mat-raised-button
-        (click)="loginWithRedirect()"
-      >
-        Login
-      </button>
+      <app-auth-button></app-auth-button>
     </div>
   </header>
 </div>

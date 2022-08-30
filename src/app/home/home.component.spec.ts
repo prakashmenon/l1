@@ -9,6 +9,7 @@ import { of } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { expect } from '@jest/globals';
 
+import { AuthButtonComponent } from '../auth-button/auth-button.component';
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
@@ -23,7 +24,7 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [HomeComponent],
+      declarations: [HomeComponent, AuthButtonComponent],
       imports: [CommonModule],
       providers: [{ provide: AuthService, useValue: authServiceStub }],
     });
@@ -47,18 +48,5 @@ describe('HomeComponent', () => {
     expect(
       compiled.querySelector('.docs-header-headline')?.textContent
     ).toContain('The Kitchen Sink Application');
-  });
-
-  it('should render login button if not authenticated', () => {
-    expect(compiled.querySelector('button')?.textContent).toContain('Login');
-  });
-
-  it('should not render login button if authenticated', () => {
-    let authService = TestBed.inject(AuthService);
-    // Need to force update as isAuthenticated$ is readonly
-    Object.defineProperty(authService, 'isAuthenticated$', { value: of(true) });
-    fixture.detectChanges();
-    compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('button')).toBeNull();
   });
 });
