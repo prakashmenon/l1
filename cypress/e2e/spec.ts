@@ -18,13 +18,9 @@ describe('Login handling', () => {
 
   it('Clicking login should load auth0 login dialog', () => {
     cy.get('#login').click();
-    cy.origin(
-      `${loginURL}/`,
-      { args: { loginURL: loginURL } },
-      ({ loginURL }) => {
-        cy.url().should('include', loginURL);
-      }
-    );
+    cy.origin(origin, { args: { loginURL: loginURL } }, ({ loginURL }) => {
+      cy.url().should('include', loginURL);
+    });
   });
 
   it('Entering invalid username and password on auth0 login dialog should show error message', () => {
